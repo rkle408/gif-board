@@ -4,9 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gif Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <title>Gif</title>
 </head>
 <body>
-  
+  <section class="section is-large">
+    <header>
+      <h1 class="title">Word Generator</h1>
+    </header>
+    <h2 class="subtitle">
+      Click the <strong>button</strong> to generate a random word and a special surprise.
+    </h2>
+    <button id="generatorBtn" class="button">Give me a word</button>
+  </section>
+
+  <section class="section is-large">
+    <h2 class="title" id="randomWord"></h2>
+    <h3 class="subtitle">
+      Enjoy this <strong>gif</strong> made special for you.
+    </h3>
+    <figure class="image is-fullwidth">
+      <img id="randomGif" src="https://bulma.io/images/placeholders/128x128.png">
+    </figure>
+  </section>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./assets/js/script.js"></script>
 </html>

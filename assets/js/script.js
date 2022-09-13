@@ -4,7 +4,14 @@ var giphyUrl = `api.giphy.com/v1/gifs/search?q=${randomWord}&limit=${numberOfRes
 function getGiphy () {
     fetch(giphyUrl)
         .then (function (response) {
-            response.json();
+            if (response) {
+                response.json();
+            } else {
+                console.log(err);
+            }
+        })
+        .then (function (data) {
+            console.log(data);
         })
 }
 

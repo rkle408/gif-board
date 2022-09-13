@@ -9,20 +9,22 @@
 </head>
 <body>
   <section class="section is-large">
-    <h1 class="title">Word Generator</h1>
+    <header>
+      <h1 class="title">Word Generator</h1>
+    </header>
     <h2 class="subtitle">
       Click the <strong>button</strong> to generate a random word and a special surprise.
     </h2>
-    <button class="button">Give me a word</button>
+    <button id="generatorBtn" class="button">Give me a word</button>
   </section>
 
   <section class="section is-large">
-    <h1 class="title" id="randomWord"></h1>
-    <h2 class="subtitle">
+    <h2 class="title" id="randomWord"></h2>
+    <h3 class="subtitle">
       Enjoy this <strong>gif</strong> made special for you.
-    </h2>
+    </h3>
     <figure class="image is-fullwidth">
-      <img src="https://bulma.io/images/placeholders/128x128.png">
+      <img id="randomGif" src="https://bulma.io/images/placeholders/128x128.png">
     </figure>
   </section>
 </body>

@@ -1,3 +1,5 @@
+// From: https://api-ninjas.com/api/randomword
+
 $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/randomword',

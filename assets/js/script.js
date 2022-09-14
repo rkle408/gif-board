@@ -66,9 +66,6 @@ function callWordAPI() {
 
   //populate random word in id="randomWord"
   
-
-  
-
   // store word local storage
   
   function callGif(result) {

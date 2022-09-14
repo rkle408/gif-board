@@ -42,7 +42,21 @@ regenBtn.addEventListener('click', callWordAPI);
 // listen for a click
 //call function
 function callWordAPI() {
-  
+  var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
+  $.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/randomword',
+    headers: { 'X-Api-Key': 'wordAPIKey'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+  });
+
+  console.log(wordAPIKey);
 
   // call the word API
 

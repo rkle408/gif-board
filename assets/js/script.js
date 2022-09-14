@@ -1,20 +1,6 @@
 // Giphy API
 // var giphyUrl = `api.giphy.com/v1/gifs/search?q=${randomWord}&limit=${numberOfResults}&api_key=${apiKey}`
 
-// function getGiphy () {
-//     fetch(giphyUrl)
-//         .then (function (response) {
-//             if (response) {
-//                 response.json();
-//             } else {
-//                 console.log(err);
-//             }
-//         })
-//         .then (function (data) {
-//             console.log(data);
-//         })
-// }
-
 // Random word API
 var gifAPIKey = "E91uL2R8hxuTohj77Vu2F36JSiuJwFjR";
 var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
@@ -91,15 +77,6 @@ function callWordAPI() {
 }
 
 // path to gif url in console: data.data[0].images.downsized_large.url
-
-
-
-
-
-
-
-
-
 
 // will restart above function 
 var regenBtn = document.getElementById('regenBtn');

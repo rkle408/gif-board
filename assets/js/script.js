@@ -42,7 +42,7 @@ regenBtn.addEventListener('click', callWordAPI);
 // listen for a click
 //call function
 function callWordAPI() {
-  var 
+  
 
   // call the word API
 

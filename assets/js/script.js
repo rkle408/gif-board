@@ -16,6 +16,8 @@
 // }
 
 // Random word API
+var gifAPIKey = "E91uL2R8hxuTohj77Vu2F36JSiuJwFjR";
+var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
 
 var genBtn = document.getElementById('generatorBtn');
 genBtn.addEventListener('click', hide);
@@ -43,7 +45,6 @@ regenBtn.addEventListener('click', callWordAPI);
 //call function
 function callWordAPI() {
   // call the word API
-  var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/randomword',
@@ -69,13 +70,26 @@ function callWordAPI() {
   // store word local storage
   
   function callGif(result) {
-
-
+    console.log(result.word);
+    var giphyUrl = `https://api.giphy.com/v1/gifs/search?q=${result.word}&limit=${1}&api_key=${gifAPIKey}`
+    console.log(giphyUrl);
+    fetch(giphyUrl)
+        .then (function (response) {
+            if (response) {
+                return response.json();
+            } else {
+                console.log(err);
+            }
+        })
+        .then (function (data) {
+            console.log(data.data[0].images.downsized_large.url);
+        })
   }
 }
 
 
-
+// data.data[0].images.downsized_large.url
+// console.log
 
 
 

@@ -42,6 +42,7 @@ regenBtn.addEventListener('click', callWordAPI);
 // listen for a click
 //call function
 function callWordAPI() {
+  // call the word API
   var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
   $.ajax({
     method: 'GET',
@@ -50,23 +51,24 @@ function callWordAPI() {
     contentType: 'application/json',
     success: function(result) {
         console.log(result);
+        var plugInWord = result
+        console.log(plugInWord, result);
+        callGif(result);
     },
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
   });
-
-  console.log(wordAPIKey);
-
-  // call the word API
+    // console.log(wordAPIKey);
 
   //populate random word in id="randomWord"
+  
+
+  
 
   // store word local storage
   
-
-
-  function callGif() {
+  function callGif(result) {
 
 
   }

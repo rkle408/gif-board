@@ -5,26 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Gif</title>
 </head>
 <body>
-  <section class="section is-large">
+  <section id="hideSection" class="section is-large">
     <header>
-      <h1 class="title">Word Generator</h1>
+      <h1 class="title hide">Word Generator</h1>
     </header>
-    <h2 id= "h2-1" class="subtitle">
+    <h2 class="subtitle hide">
       Click the <strong>button</strong> to generate a random word and a special surprise.
     </h2>
-    <button id="generatorBtn" class="button">Give me a word</button>
+    <button id="generatorBtn" class="button">Give me a word.</button>
   </section>
 
-  <section id='gif-gen'class="section is-large">
+  <!--moving button into this section breaks the page. Why?
+  It didn't work because if a button is inside a form you must prevent default in JS-->
+  
+  <section id='gif-gen' class="section is-small">
     <h2 class="title" id="randomWord"></h2>
     <h3 class="subtitle">
       Enjoy this <strong>gif</strong> made special for you.
     </h3>
+    <button id="regenBtn" class="button">Give me a new word.</button>
     <figure class="image is-fullwidth">
-      <img id="randomGif" src="https://bulma.io/images/placeholders/128x128.png">
+      <img id="randomGif" src="">
     </figure>
   </section>
 </body>

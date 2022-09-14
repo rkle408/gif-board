@@ -55,6 +55,8 @@ function callWordAPI() {
         var plugInWord = result
         console.log(plugInWord, result);
         callGif(result);
+        var randomWord = document.getElementById("randomWord");
+        randomWord.textContent = result.word
     },
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
@@ -82,14 +84,16 @@ function callWordAPI() {
             }
         })
         .then (function (data) {
+          if (data.data.length > 0) {
             console.log(data.data[0].images.downsized_large.url);
-        })
+            var randomGif = document.getElementById("randomGif");
+            randomGif.src = data.data[0].images.downsized_large.url
+          } // else will insert leeches
+        }) 
   }
 }
 
-
-// data.data[0].images.downsized_large.url
-// console.log
+// path to gif url in console: data.data[0].images.downsized_large.url
 
 
 

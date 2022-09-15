@@ -14,13 +14,13 @@ genBtn.addEventListener('click', hide);
       if (hideMainEl.style.display === 'none') {
           hideMainEl.style.display = 'block'
           gifGen.style.display = 'none';
-
+          
       } else {
           hideMainEl.style.display = 'none'
           gifGen.style.display = 'block';
 
       }
-  
+  callWordAPI();
   }
 
 // function -> call word api -> generate a word -> put word into the API search (like calling geocode into lat and lon) -> giphy will generate
@@ -49,8 +49,6 @@ function callWordAPI() {
     }
   });
     // console.log(wordAPIKey);
-
-  //populate random word in id="randomWord"
   
   // store word local storage
   
@@ -76,8 +74,9 @@ function callWordAPI() {
   }
 }
 
-// path to gif url in console: data.data[0].images.downsized_large.url
+
 
 // will restart above function 
 var regenBtn = document.getElementById('regenBtn');
 regenBtn.addEventListener('click', callWordAPI);
+

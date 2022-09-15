@@ -74,8 +74,8 @@ function callWordAPI() {
             // console.log(data.data[0].images.downsized_large.url);
             var randomGif = document.getElementById("randomGif");
             randomGif.src = data.data[0].images.downsized_large.url
-          } else {
-          randomGif.src = "./assets/ScarySnake.png";
+          // } else {
+          // randomGif.src = "./assets/ScarySnake.png";
           //display scarysnake
           }
         }) 

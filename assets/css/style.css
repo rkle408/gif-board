@@ -1,3 +1,23 @@
 #gif-gen {
   display: none;
 }
+
+@media screen and (max-width: 992px) {
+  * {
+    background-color: rgba(255, 235, 222, 0.585);
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  * {
+    background-color: rgb(255, 235, 217);
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  * {
+    background-color:rgb(255, 235, 208) ;
+  }
+}

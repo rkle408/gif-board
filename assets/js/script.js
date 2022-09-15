@@ -1,35 +1,33 @@
 // Giphy API
 // var giphyUrl = `api.giphy.com/v1/gifs/search?q=${randomWord}&limit=${numberOfResults}&api_key=${apiKey}`
+var clientWord;
 
-// Random word API
 var gifAPIKey = "E91uL2R8hxuTohj77Vu2F36JSiuJwFjR";
 var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
 
+
 var genBtn = document.getElementById('generatorBtn');
-genBtn.addEventListener('click', hide);
-  function hide() {
+genBtn.addEventListener('click', ()=>{hide(), callWordAPI()});
+function hide() {
       var gifGen = document.getElementById('gif-gen');
       var hideMainEl = document.getElementById('hideSection')
       genBtn.textContent = "Go Back" ;
       if (hideMainEl.style.display === 'none') {
           hideMainEl.style.display = 'block'
           gifGen.style.display = 'none';
-
+          
       } else {
           hideMainEl.style.display = 'none'
           gifGen.style.display = 'block';
-
       }
-  
   }
 
 // function -> call word api -> generate a word -> put word into the API search (like calling geocode into lat and lon) -> giphy will generate
 
-var regenBtn = document.getElementById("regenBtn");
-regenBtn.addEventListener('click', callWordAPI);
 // listen for a click
 //call function
 function callWordAPI() {
+
   // call the word API
   $.ajax({
     method: 'GET',
@@ -43,17 +41,22 @@ function callWordAPI() {
         callGif(result);
         var randomWord = document.getElementById("randomWord");
         randomWord.textContent = result.word
-    },
+
+        var previousWord = JSON.parse(localStorage.getItem("previousWord")) || [];
+        var newWord = result.word;
+        previousWord.unshift(newWord)
+        console.log(previousWord);
+        localStorage.setItem("previousWord", JSON.stringify(previousWord));
+            },
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
   });
-    // console.log(wordAPIKey);
+}
+  // generated word = result.word
+  // random word variable = randomWord
+  //function to generate random word = callWordAPI
 
-  //populate random word in id="randomWord"
-  
-  // store word local storage
-  
   function callGif(result) {
     console.log(result.word);
     var giphyUrl = `https://api.giphy.com/v1/gifs/search?q=${result.word}&limit=${1}&api_key=${gifAPIKey}`
@@ -68,16 +71,60 @@ function callWordAPI() {
         })
         .then (function (data) {
           if (data.data.length > 0) {
-            console.log(data.data[0].images.downsized_large.url);
+            // console.log(data.data[0].images.downsized_large.url);
             var randomGif = document.getElementById("randomGif");
             randomGif.src = data.data[0].images.downsized_large.url
-          } // else will insert leeches
+          // } else {
+          // randomGif.src = "./assets/ScarySnake.png";
+          //display scarysnake
+          }
         }) 
-  }
-}
+  } 
 
-// path to gif url in console: data.data[0].images.downsized_large.url
+  var submitBtn = document.getElementById("submitBtn");
+  submitBtn.addEventListener('click',searchGif);
+    function searchGif () {
+      //get value of word from input
+      var clientWord = document.getElementById("clientWord");
+      clientInput = clientWord.value.trim();
+      console.log(clientInput);
+      //
+      var displayWord = document.getElementById("displayWord");
+      displayWord.innerText = clientInput
+      hide();
+      callClientGif(clientInput);
+      console.log(clientInput);
+      //retrieve input to clientWord (trim)
+      //input word into giphy function
+    }
+  
+  function callClientGif(clientInput) {
+    var giphyUrl = `https://api.giphy.com/v1/gifs/search?q=${clientInput}&limit=${1}&api_key=${gifAPIKey}`
+        console.log(clientInput);
+        fetch(giphyUrl)
+            .then (function (response) {
+                if (response) {
+                    return response.json();
+                } else {
+                    console.log(err);
+                }
+            })
+            .then (function (data) {
+              if (data.data.length > 0) {
+                console.log(data.data[0].images.downsized_large.url);
+                var randomGif = document.getElementById("randomGif");
+                randomGif.src = data.data[0].images.downsized_large.url
+              } // else will insert leeches
+            })
+  }
 
 // will restart above function 
 var regenBtn = document.getElementById('regenBtn');
-regenBtn.addEventListener('click', callWordAPI);
+regenBtn.addEventListener('click', clear);
+
+function clear() {
+  console.log("HI");
+  var displayWord = document.getElementById("displayWord");
+  displayWord.textContent = "";
+  callWordAPI();
+}

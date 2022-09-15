@@ -24,11 +24,10 @@ function hide() {
 
 // function -> call word api -> generate a word -> put word into the API search (like calling geocode into lat and lon) -> giphy will generate
 
-var regenBtn = document.getElementById("regenBtn");
-regenBtn.addEventListener('click', callWordAPI);
 // listen for a click
 //call function
 function callWordAPI() {
+
   // call the word API
   $.ajax({
     method: 'GET',
@@ -118,5 +117,11 @@ function callWordAPI() {
 
 // will restart above function 
 var regenBtn = document.getElementById('regenBtn');
-regenBtn.addEventListener('click', callWordAPI);
+regenBtn.addEventListener('click', clear);
 
+function clear() {
+  console.log("HI");
+  var displayWord = document.getElementById("displayWord");
+  displayWord.textContent = "";
+  callWordAPI();
+}

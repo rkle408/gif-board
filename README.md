@@ -31,14 +31,14 @@ We utilized Bulma to ensure an esthetically pleasing and simple layout.
 ### 3) After pressing the "Give me a new word" button, a new random word and new gif display:
 ![screencapture3](https://user-images.githubusercontent.com/108099192/190508487-0793a503-43b3-4e63-8091-c5b46d7fcfc4.png)
 
-### 4) Back to the home page to input our own word/words ("just do it"):
+### 4) Local storage to store our randomly generated words from the API:
+![screencapture6](https://user-images.githubusercontent.com/108099192/190508500-d6c5c8ea-939e-48b6-932c-590dfb967132.png)
+
+### 5) Back to the home page to input our own word/words ("just do it"):
 ![screencapture4](https://user-images.githubusercontent.com/108099192/190508495-6f1c2208-9af8-478c-929a-0e35b195fff0.png)
 
-### 5) Gif that is generated with our own words ("just do it"):
+### 6) Gif that is generated with our own words ("just do it"):
 ![screencapture5](https://user-images.githubusercontent.com/108099192/190508496-75467cfd-6231-4e81-9765-bf3afd1e8dd5.png)
-
-### 6) Local storage to store our randomly generated words from the API:
-![screencapture6](https://user-images.githubusercontent.com/108099192/190508500-d6c5c8ea-939e-48b6-932c-590dfb967132.png)
 
 ## Deploy Application: <https://rkle408.github.io/gif-board/>
 

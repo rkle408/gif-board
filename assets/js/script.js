@@ -1,7 +1,6 @@
 // Giphy API
 // var giphyUrl = `api.giphy.com/v1/gifs/search?q=${randomWord}&limit=${numberOfResults}&api_key=${apiKey}`
 
-// Random word API
 var gifAPIKey = "E91uL2R8hxuTohj77Vu2F36JSiuJwFjR";
 var wordAPIKey = "vub4wmJe4XCsCcqUpxqPhQ==kF7YwDOjYcCofVVg";
 
@@ -43,15 +42,33 @@ function callWordAPI() {
         callGif(result);
         var randomWord = document.getElementById("randomWord");
         randomWord.textContent = result.word
-    },
+
+        var previousWord = JSON.parse(localStorage.getItem("previousWord")) || [];
+        var newWord = result.word;
+        previousWord.unshift(newWord)
+        console.log(previousWord);
+        localStorage.setItem("previousWord", JSON.stringify(previousWord));
+            },
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
   });
-    // console.log(wordAPIKey);
-  
+
+// generated word = result.word
+// random word variable = randomWord
+//function to generate random word = callWordAPI
+// 
+
+  // var storedWord = [];
+
+  // storedWord.unshift(result.word)
+  // localStorage.setItem("storedWord", JSON.stringify(storedWord));
+  // renderMessage();
   // store word local storage
   
+
+
+
   function callGif(result) {
     console.log(result.word);
     var giphyUrl = `https://api.giphy.com/v1/gifs/search?q=${result.word}&limit=${1}&api_key=${gifAPIKey}`
@@ -73,7 +90,6 @@ function callWordAPI() {
         }) 
   }
 }
-
 
 
 // will restart above function 

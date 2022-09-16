@@ -3,13 +3,13 @@
 ## An application to cure your boredom, and that may also expand your vocabulary, utilizing a random word generator API and a GIPHY API.
 Our team's main goal in developing this application is two-fold: quell boredom, while also possibly providing an educational component.
 
-Our application gives you the options of either having an API give you a randomly generated word through the press of a button, or you can input your own text, and that will automatically autopopulate into the GIPHY generator, displaying a fun gif on the page!
+Our application gives you the options of either having an API give you a randomly generated word through the press of a button, or you can input your own text, and that will automatically auto-populate into the GIPHY generator, displaying a fun gif on the page!
 
 As our first project collaborating with others, we learned there are numerous aspects that are different from working alone. First, we learned the importance of constant communication, constant saves and commits, and constantly ensuring we all had updated GitHub main branch repos in our individual local machines. Second, and seemingly most importantly, we learned that working together helps us all learn, as we all have different viewpoints, different ways of understanding, and different ways to explain that may be easier for another person to understand.
 
-One of our greatest challenges in this project was overcoming our <i>fear</i> of losing all of our hardwork on GitHub. Thankfully, through our teamwork and communication, this fear never came to fruition. Throughout the project, we would run into minor challenges, such as buttons breaking or words not populating, but again, through teamwork, we were able to navigate through those issues to continue to improve and add to our code.
+One of our greatest challenges in this project was overcoming our <i>fear</i> of losing all of our hard work on GitHub. Thankfully, through our teamwork and communication, this fear never came to fruition. Throughout the project, we would run into minor challenges, such as buttons breaking or words not populating, but again, through teamwork, we were able to navigate through those issues to continue to improve and add to our code. Unfortunately, an issue that we do have is that our application heavily relies on both APIs working well, and if one of them goes down, then our application will be rendered unserviceable. For the issue of a word not having an associated word, we were able to insert one of our favorite photos that will hopefully give you a smile (or will haunt your worst nightmares).
 
-For future development, we have adding a dictionary API on our brainstorm list, especially since we encountered random words that none of the four of us were familiar with. Another minor issue that we had was that some of the randomly generated words did not have associated gifs, and we therefore will try to resolve this issue utilizng a meaningful photo (to us), that will hopefully bring a smile to your face (or haunt your nightmares). Another lofty idea we have is having our application integrated into a phone's messages application so that you can randomly start funny conversations with friends even if you have nothing to talk about!
+For future development, we have adding a dictionary API on our brainstorm list, especially since we encountered random words that none of the four of us were familiar with. Another minor issue that we had was that some of the randomly generated words did not have associated gifs, and we therefore will try to resolve this issue utilizng a meaningful photo (to us), that will hopefully bring a smile to your face (or haunt your nightmares). Another lofty idea we have is having our application integrated into a phone's messages application so that you can randomly start funny conversations with friends even if you have nothing to talk about! We would also ideally like to like it so that you'll be able to save your favorite gifs to a pinboard, and come back to later.
 
 ## Technologies Utilized:
 #### 1) "Random Word API." API Ninjas. <https://api-ninjas.com/api/randomword>. Date accessed: Tuesday, September 13, 2022.
@@ -39,6 +39,9 @@ We utilized Bulma to ensure an esthetically pleasing and simple layout.
 
 ### 6) Gif that is generated with our own words ("just do it"):
 ![screencapture5](https://user-images.githubusercontent.com/108099192/190508496-75467cfd-6231-4e81-9765-bf3afd1e8dd5.png)
+
+### 7) Image given when there is no associated gif:
+![screencapture7](https://user-images.githubusercontent.com/108099192/190711574-754c8e5b-715d-4454-a1e0-cb523e3d8891.png)
 
 ## Deploy Application: <https://rkle408.github.io/gif-board/>
 

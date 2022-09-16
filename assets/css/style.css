@@ -13,20 +13,20 @@
 /* This is an application that would likely be used on cell phones therefore, we wanted to ensure it would render properly on different sized screens */
 @media screen and (max-width: 992px) {
   * {
-    background-color: rgba(255, 235, 222, 0.585);
+    background-color: rgb(255, 255, 255);
   }
 }
 
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
   * {
-    background-color: rgb(255, 235, 217);
+    background-color: rgb(255, 255, 255);
   }
 }
 
 /* Small smartphones - image placeholders change color */
 @media screen and (max-width: 576px) {
   * {
-    background-color:rgb(255, 235, 208) ;
+    background-color:rgb(255, 255, 255) ;
   }
 }

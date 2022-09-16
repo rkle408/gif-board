@@ -21,15 +21,15 @@
       Click the <strong>button</strong> to generate a random word and a special surprise.
     </h2>
 
-    <button id="generatorBtn" class="button column is-2">Random word.</button>
+    <button id="generatorBtn" class="button columns is-flex is-vcentered">Random word</button>
     <br><br>
     <h2 class="subtitle hide">
       <strong>OR</strong> type in any word and choose your own adventure.
     </h2>
     
     <div class="control">
-      <input id="clientWord" class="input column is-2" type="text" placeholder="Choose Your Word">
-      <button id="submitBtn" class="button" type="submit" value="Submit input">Submit</button>
+      <input id="clientWord" class="input columns is-flex" style="width: 33%" type="text" placeholder="Choose Your Word">
+      <button id="submitBtn" class="button columns is-flex is-vcentered" type="submit" value="Submit input">Submit</button>
     </div>
   </section>
   
@@ -41,7 +41,10 @@
       Enjoy this <strong>gif</strong> made special for you.
     </h3>
     
-    <button id="regenBtn" class="button">Give me a new word.</button>
+    <div class="is-flex is-justify-content-space-between">
+      <button id="regenBtn" class="button">Give me a new word</button>
+      <button id="goBack" class="button">Go Back</button>
+    </div>
     
     <figure class="image is-fullwidth">
       <img id="randomGif" src="" alt="Generated animated gif associated with randomly generated word">

@@ -2,6 +2,14 @@
   display: none;
 }
 
+.control {
+  margin-left: 15px;
+}
+
+#generatorBtn {
+  margin-left: 4px;
+}
+
 /* This is an application that would likely be used on cell phones therefore, we wanted to ensure it would render properly on different sized screens */
 @media screen and (max-width: 992px) {
   * {

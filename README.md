@@ -41,7 +41,7 @@ We utilized Bulma to ensure an esthetically pleasing and simple layout.
 ![screencapture5](https://user-images.githubusercontent.com/108099192/190508496-75467cfd-6231-4e81-9765-bf3afd1e8dd5.png)
 
 ### 7) Image given when there is no associated gif:
-![screencapture7](https://user-images.githubusercontent.com/108099192/190711574-754c8e5b-715d-4454-a1e0-cb523e3d8891.png)
+![screencapture7](https://user-images.githubusercontent.com/108099192/190719732-e2a85e27-41a3-4fb1-b988-41223be9e4a7.png)
 
 ## Deploy Application: <https://rkle408.github.io/gif-board/>
 

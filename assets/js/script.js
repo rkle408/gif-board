@@ -13,7 +13,6 @@ function hide() {
       var gifGen = document.getElementById('gif-gen');
       var hideMainEl = document.getElementById('hideSection')
       // THIS ACTUALLY DOES NOT DISPLAY "GO BACK"
-      genBtn.textContent = "Go Back" ;
       if (hideMainEl.style.display === 'none') {
           hideMainEl.style.display = 'block'
           gifGen.style.display = 'none';
@@ -22,6 +21,11 @@ function hide() {
           gifGen.style.display = 'block';
       }
 }
+
+var goBack = document.getElementById('goBack');
+goBack.addEventListener('click', () => {
+  location.reload();
+})
 
 // Random word generator function:
 function callWordAPI() {

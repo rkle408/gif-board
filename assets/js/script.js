@@ -75,9 +75,15 @@ function callGif(result) {
             // Ensure we have an image that renders to the screen at an appropriate size:
             // console.log(data.data[0].images.downsized_large.url);
             var randomGif = document.getElementById("randomGif");
+            var enjoy = document.getElementsByClassName("subtitle");
+            enjoy[2].innerHTML = "Enjoy this <strong>gif</strong> made special for you."
             randomGif.src = data.data[0].images.downsized_large.url
-          // } else {
-          // randomGif.src = "./assets/ScarySnake.png";
+          } else {
+            var randomGif = document.getElementById("randomGif");
+            randomGif.src = "./assets/ScarySnake.png";
+            var error = document.getElementsByClassName("subtitle");
+            error[2].textContent = "Gif not found, enjoy our pet snake."
+          // console.log(randomGif)
           //display scarysnake
           }
         }) 
